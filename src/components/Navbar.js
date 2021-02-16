@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../img/video-player.svg';
-const Navbar = () => {
+const Navbar = ({setInputSearch , fetchData}) => {
   return (
     <>
       <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -26,10 +26,16 @@ const Navbar = () => {
           <div className="navbar-start">
             <div className="navbar-item is-expanded ">
               <input
-                class="input is-primary  is-rounded"
+                className="input is-primary  is-rounded"
                 type="text"
                 placeholder="Search..."
+                onChange={(e)=>setInputSearch(e.target.value)}
               />
+            </div>
+
+            <div className='navbar-item'>
+            <button className="button is-primary" onClick={fetchData}>Search</button>
+
             </div>
           </div>
 

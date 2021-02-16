@@ -25,7 +25,10 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script src="https://kit.fontawesome.com/e769b58a0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
   </head>
+  
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
@@ -39,5 +42,54 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js" async></script>
+
+    
+    <script>
+  
+      console.log(document.querySelector('.glider'))
+  
+      window.addEventListener('load', function(){
+    new Glider(document.querySelector('.carousel__lista'), {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: '.carousel__indicadores',
+      arrows: {
+        prev: '.carousel__anterior',
+        next: '.carousel__siguiente'
+      },
+      responsive: [
+        {
+          // screens greater than >= 775px
+          breakpoint: 450,
+          settings: {
+          // Set to `auto` and provide item width to adjust to viewport
+          slidesToShow: 2,
+          slidesToScroll: 2
+          }
+        },{
+          // screens greater than >= 1024px
+          breakpoint: 800,
+          settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+          }
+        }
+      ]
+    });
+  });
+  
+
+  
+    </script>
+
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/waterfall.js/1.0.2/waterfall.min.js"></script> -->
+<script>
+  
+
+</script>
   </body>
+
+  
+
 </html>
