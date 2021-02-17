@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import Season from './Season';
 
 const ShowSeasons = () => {
   const [listSeasons, setListSeasons] = useState([]);
@@ -19,12 +20,10 @@ const ShowSeasons = () => {
   return (
     <div>
       {listSeasons.map((element) => {
-        return (
-          <div className="Box">
-            <h1>{element.season}</h1>
-            <h1>{element.name}</h1>
-          </div>
-        );
+
+       
+        return <Season element./>
+
       })}
     </div>
   );
