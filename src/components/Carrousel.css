@@ -1,71 +1,75 @@
+.showDetailBox {
 
+    display: flex;
+}
 
-
-/* --- --- CAROUSEL --- --- */
 .carousel__contenedor {
-	position: relative;
+    position: relative;
     margin-top: 80px;
     /* display: flex; */
 }
 
 .carousel__anterior,
 .carousel__siguiente {
-	position: absolute;
-	display: block;
-	width: 30px;
-	height: 30px;
-	border: none;
-	top: calc(50% - 35px);
-	cursor: pointer;
-	line-height: 30px;
-	text-align: center;
-	background: none;
-	color: black;
-	/* opacity: 20%; */
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: black;
+    /* opacity: 20%; */
 }
 
 .carousel__anterior:hover,
 .carousel__siguiente:hover {
-	opacity: 100%;
+    opacity: 100%;
 }
 
 .carousel__anterior {
-	left: -30px;
+    left: -30px;
 }
 
 .carousel__siguiente {
-	right: -30px;
+    right: -30px;
 }
 
 .carousel__lista {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 .carousel__elemento {
-	text-align: center;
+    text-align: center;
 }
 
 .carousel__indicadores .glider-dot {
-	display: block;
-	width: 30px;
-	height: 4px;
-	background: black;
-	opacity: .2;
-	border-radius: 0;
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: black;
+    opacity: .2;
+    border-radius: 0;
 }
 
 .carousel__indicadores .glider-dot:hover {
-	opacity: .5;
+    opacity: .5;
 }
 
 .carousel__indicadores .glider-dot.active {
-	opacity: 1;
+    opacity: 1;
 }
 
 
 
-.item { width: 300px; }
+.item {
+    width: 300px;
+}
 
-.card{
+.card {
     margin: 10px;
+    cursor: pointer;
 }

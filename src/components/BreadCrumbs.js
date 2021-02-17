@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 const BreadCrumbs = () => {
   return (
@@ -6,13 +7,13 @@ const BreadCrumbs = () => {
       <nav className="breadcrumb is-centered" aria-label="breadcrumbs">
         <ul>
           <li>
-            <a href="#">Shows</a>
+            <Link to="shows"> Movie </Link>
           </li>
           <li>
-            <a href="#">People</a>
+            <Link to="episodes"> Episodes </Link>
           </li>
           <li>
-            <a href="#">Networks</a>
+            <Link to="casts"> Cast </Link>
           </li>
           <li className="is-active">
             <a href="#" aria-current="page">

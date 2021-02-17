@@ -1,41 +1,42 @@
-import React from 'react'
+import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
+import { Link } from 'react-router-dom';
+const CardMovie = ({ result }) => {
+  console.log(result);
 
-const CardMovie = ({result}) => {
-
-
-    
-
-    console.log(result,'CardMovie')
-    return (
-        <div className="card">
+  return (
+    <Link to={{ pathname: '/shows/' + result.show.id, state: result.show }}>
+      <div className="card">
         <div className="card-image">
           <figure className="image x">
-           { result.show.image ? <img src={result.show.image.medium} alt="Placeholder"  /> : <h1>No Image</h1>}
+            {result.show.image ? (
+              <img src={result.show.image.medium} alt="Placeholder" />
+            ) : (
+              <h1>No Image</h1>
+            )}
           </figure>
         </div>
         <div className="card-content">
           <div className="media">
-            <div className="media-left">
-              <figure className="image is-48x48">
-                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"/>
-              </figure>
-            </div>
             <div className="media-content">
-              <p className="title is-4">John Smith</p>
-              <p className="subtitle is-6">@johnsmith</p>
+              <p className="title is-4">{result.show.name}</p>
+              <span className="tag is-success">
+                {result.show.rating.average
+                  ? result.show.rating.average
+                  : 'No info'}
+              </span>
+              {/* <p className="subtitle is-6">{result.show.rating.average}</p> */}
             </div>
           </div>
-      
+
           <div className="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-            <a href="#">#css</a> <a href="#">#responsive</a>
-            <br/>
-            <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            {ReactHtmlParser(result.show.summary)}
+            <br />
           </div>
         </div>
       </div>
-    )
-}
+    </Link>
+  );
+};
 
-export default CardMovie
+export default CardMovie;

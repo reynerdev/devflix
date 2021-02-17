@@ -1,3 +1,3 @@
-const searchBaseUri = 'http://api.tvmaze.com/search/shows?q='
+const searchBaseUri = 'http://api.tvmaze.com/search/shows?q=';
 
-export {searchBaseUri}
+export { searchBaseUri };
