@@ -20,10 +20,7 @@ const ShowSeasons = () => {
   return (
     <div>
       {listSeasons.map((element) => {
-
-       
-        return <Season element./>
-
+        return <Season element />;
       })}
     </div>
   );
