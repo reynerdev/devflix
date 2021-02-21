@@ -40,7 +40,7 @@ function App() {
         <BreadCrumbs />
         <Switch>
           <Route exact path="/">
-            {/* <Carrousel /> */}
+            <Carrousel />
             {!!searchList.length && <SearchList searchList={searchList} />}
           </Route>
           <Route exact path="/shows/:id" component={ShowDetail} />
