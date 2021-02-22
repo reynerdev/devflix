@@ -5,7 +5,7 @@ import Season from './Season';
 
 const ShowSeasons = () => {
   const [listSeasons, setListSeasons] = useState([]);
-  const [seasons, filterSeasons] = useSeasons();
+  const [seasons, filterSeasons] = useSeasons([]);
 
   const params = useLocation();
 
@@ -21,10 +21,10 @@ const ShowSeasons = () => {
   }, [params]);
   return (
     <div>
-      {seasons.map((element, index) => {
-        console.log(element.season, 'Season Value');
-        return <Season key={index} element={element.season} />;
-      })}
+      {!seasons &&
+        seasons.map((element, index) => {
+          return <Season key={index} element={element.season} index={index} />;
+        })}
     </div>
   );
 };
